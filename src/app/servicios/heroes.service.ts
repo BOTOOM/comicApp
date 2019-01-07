@@ -62,6 +62,9 @@ export class HeroesService {
    gerHeroes(){
      return this.heroes;
    }
+   gerHeroe(idx:number){
+     return this.heroes[idx];
+   }
 
 }
 
