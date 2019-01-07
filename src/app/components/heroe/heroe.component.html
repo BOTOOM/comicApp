@@ -1,4 +1,4 @@
-<h1 class="animated fadeIn">{{heroe.nombre}}<small> {{heroe.aparicion}}</small></h1>
+<h1 class="animated fadeIn">{{heroe.nombre | uppercase }}<small> ({{heroe.aparicion | date:'y' }} )</small></h1>
 <hr>
 
 <div class="row">
@@ -16,7 +16,7 @@
       {{heroe.bio}}
     </p>
     <div>
-      <img src="assets/img/{{heroe.casa}}.png" alt="{{heroe.casa}}" class="img-fluid">
+      <img src="assets/img/{{heroe.casa}}.png" alt="{{heroe.casa}}" class="img-fluid img-logo">
     </div>
   </div>
 

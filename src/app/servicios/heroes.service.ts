@@ -56,7 +56,6 @@ export class HeroesService {
     ];
 
   constructor() {
-    console.log("servicio listo para usar!!");
    }
 
    gerHeroes(){
@@ -64,6 +63,18 @@ export class HeroesService {
    }
    gerHeroe(idx:number){
      return this.heroes[idx];
+   }
+
+   buscarHeroe(busca:string):Heroe[]{
+     let heroesArr:Heroe[]= [];
+     busca= busca.toLowerCase();
+     for(let heroe of this.heroes){
+       let nombre = heroe.nombre.toLowerCase();
+       if (nombre.indexOf(busca) >=0){
+         heroesArr.push(heroe)
+       }
+     }
+     return heroesArr;
    }
 
 }
